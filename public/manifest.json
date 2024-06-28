@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "STL-Latest",
+    "version": "0.02",
+    "description": "A draggable pop-up window in a Chrome extension.",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+    
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  

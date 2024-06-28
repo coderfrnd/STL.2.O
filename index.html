@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <style>
+      #popup-window {
+        position: absolute;
+        width: 800px;
+        height: 600px;
+        background: white;
+        border: 1px solid black;
+        padding: 10px;
+        top: 50px;
+        left: 50px;
+        z-index: 10;
+        cursor: move;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" id="popup-window"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/popup.js"></script>
+  </body>
+</html>
+<!-- // {
+  //     "manifest_version":3,
+  //     "version":"1.0.0",
+  //     "name":"New trial",
+  //     "action":{
+  //         "default_popup":"index.html"
+  //     },
+  //     "permission":[
+  //         "scripting"
+  //     ],
+  //     "host_permissions":[
+  //         "http://*/*",
+  //         "https://*/*"
+  //     ]
+  // } -->
