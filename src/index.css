@@ -1,3 +1,12 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-gradient-border {
+  @apply transition-all;
+}
+
+.hover-gradient-border:hover {
+  border-image: linear-gradient(to right, #9f7aea, #6b46c1) 1;
+}
