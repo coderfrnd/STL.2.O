@@ -15,12 +15,13 @@ const App = () => {
      
       </ParticlesComponent>
      </div>
-     <div>
-      {/* <Block/> */}
+     <div className='h-[100%] w-[100%] flex-col items-center justify-center'>
+      
+    <div className='m-12 p-2 h-[10%] items-center flex justify-center'><Block props='C++' containerRef={containerRef} /></div>  
+    <div className='m-12 p-2 h-[10%] items-center flex justify-center'><Block props='JAVA' containerRef={containerRef} /></div> 
+    <div className='m-12 p-2 h-[10%] items-center flex justify-center'><Block props='PYTHON' containerRef={containerRef} /></div> 
      </div>
-     <Block props='C++' containerRef={containerRef} />
-     <Block props='JAVA' containerRef={containerRef} />
-     <Block props='PYTHON' containerRef={containerRef} />
+    
     </div>
   );
 }

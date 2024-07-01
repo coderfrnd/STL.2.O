@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Block = ({ props, src, containerRef }) => {
   return (
     <motion.div
-      className='bg-slate-900 flex h-[50px] w-[180px] justify-center items-center border-[1px] border-sky-200 hover:bg-black transition-all'
+      className='bg-slate-900 flex h-[50px] w-[180px] justify-center items-center border-[1px] border-sky-200 hover:bg-black transition-all m-2 p-2'
       whileHover={{
         background: 'black',
         borderImage: 'linear-gradient(to right, #9f7aea, #6b46c1) 1'
