@@ -8,13 +8,16 @@ const Block = ({ props, src, containerRef }) => {
       className='bg-slate-900 flex h-[50px] w-[180px] justify-center items-center border-[1px] border-sky-200 hover:bg-black transition-all m-2 p-2'
       whileHover={{
         background: 'black',
-        borderImage: 'linear-gradient(to right, #9f7aea, #6b46c1) 1'
+        borderImage: 'linear-gradient(to right, #9f7aea, #6b46c1) 1',
+        scale:1.1
       }}
       drag
       dragConstraints={containerRef}
       dragElastic={0.2}
       style={{ position: 'absolute' }}
       whileDrag={{scale:1.2}} 
+      // whileHover={{ scale: 1.1 }}
+      // transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <div>
         {src && <img src={src} alt="" />}
