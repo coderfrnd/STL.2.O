@@ -19,21 +19,27 @@ const Start = ({ props }) => {
       </div>
 
       <div className="h-[100%] w-[100%] flex-col items-center justify-center">
+      <Link to="/cpp">
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
-          <Link to="/cpp">
+         
             <Block props="C++" containerRef={containerRef} />
-          </Link>
+        
         </div>
+        </Link>
+        <Link to='/java'>
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
-          <Link to='/java'>
+         
             <Block props="JAVA" containerRef={containerRef} />
-          </Link>
+          
         </div>
+        </Link>
+        <Link to='/python'>
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
-          <Link to='/python'>
+         
             <Block props="PYTHON" containerRef={containerRef} />
-          </Link>
+         
         </div>
+        </Link>
       </div>
     </div>
   );
