@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Map = () => {
+function CppFront() {
   return (
     <div>
-      
+        CPP Front
     </div>
   )
 }
 
-export default Map
+export default CppFront

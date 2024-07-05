@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Map = () => {
+function JavaFront() {
   return (
     <div>
-      
+        Java Front
     </div>
   )
 }
 
-export default Map
+export default JavaFront
