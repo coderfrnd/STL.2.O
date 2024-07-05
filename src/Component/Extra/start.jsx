@@ -12,34 +12,32 @@ const Start = ({ props }) => {
     // <MemoryRouter>
     <div
       ref={containerRef}
-      className="h-screen w-screen bg-black text-white flex justify-center items-center relative"
+      className="h-screen w-screen bg-black text-white flex justify-center items-center  relative"
     >
-      <div className="h-[100%]">
+      <div className="">
         <ParticlesComponent></ParticlesComponent>
       </div>
 
       <div className="h-[100%] w-[100%] flex-col items-center justify-center">
-      <Link to="/cpp">
+      {/* <Link to="/cpp"> */}
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
          
-            <Block props="C++" containerRef={containerRef} />
+        <Block props="CPP" containerRef={containerRef} navigateTo="/cpp" />
         
         </div>
-        </Link>
-        <Link to='/java'>
+       
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
          
-            <Block props="JAVA" containerRef={containerRef} />
+        <Block props="JAVA" containerRef={containerRef} navigateTo="/java" />
           
         </div>
-        </Link>
-        <Link to='/python'>
+
         <div className="m-12 p-2 h-[10%] items-center flex justify-center">
          
-            <Block props="PYTHON" containerRef={containerRef} />
+        <Block props="PYTHON" containerRef={containerRef} navigateTo="/python" />
          
         </div>
-        </Link>
+        {/* </Link> */}
       </div>
     </div>
   );
