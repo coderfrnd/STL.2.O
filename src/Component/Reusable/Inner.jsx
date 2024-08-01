@@ -6,10 +6,15 @@ const Inner = ({ children,props }) => {
 
   return (
     <>
-      <div className="text-black flex w-screen">
+      <div className="text-black flex flex-wrap w-[34%] justify-center items-center ">
         <motion.div
           onClick={() => setIsOpen(true)}
-          className="p-4 border m-2 cursor-pointer bg-white w-[100%] h-[16%] flex justify-center "
+          className="p-4 border m-2 cursor-pointer bg-slate-900 text-white w-[80%] h-[16%] flex justify-center hover:bg-black transition-all  "
+          whileHover={{
+            background: 'black',
+            borderImage: 'linear-gradient(to right, #9f7aea, #6b46c1) 1',
+            scale: 1.1
+          }}
         >
           <motion.h2 className=''>{children}</motion.h2>
         </motion.div>

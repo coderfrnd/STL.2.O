@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Block from '../../Component/Reusable/Block';
 import Inner from '../../Component/Reusable/Inner';
+import ParticlesComponent from '../../Component/Particle/particle';
 
 const Map = () => {
   const containerRef = useRef(null);
@@ -75,16 +76,57 @@ int main() {
 
     return 0;
 }`;
+const codeFind = `
+#include <iostream>
+#include <map>
+
+int main() {
+    std::map<int, std::string> myMap;
+    myMap[1] = "One";
+    myMap[2] = "Two";
+    myMap[3] = "Three";
+
+    // Finding an element
+    auto it = myMap.find(2);
+    if (it != myMap.end()) {
+        std::cout << "Found: " << it->first << " => " << it->second << std::endl;
+    } else {
+        std::cout << "Element not found" << std::endl;
+    }
+
+    return 0;
+}`;
+
+const codeExistence = `
+#include <iostream>
+#include <map>
+
+int main() {
+    std::map<int, std::string> myMap;
+    myMap[1] = "One";
+    myMap[2] = "Two";
+    myMap[3] = "Three";
+
+    // Checking existence of an element
+    if (myMap.count(2) > 0) {
+        std::cout << "Element at key 2 exists" << std::endl;
+    } else {
+        std::cout << "Element at key 2 does not exist" << std::endl;
+    }
+
+    return 0;
+}`;
 
   return (
-    <div className="h-screen w-screen bg-[#AE04FF]">
+    <div className="h-screen w-screen bg-[#110d16]  flex-col ">
+      <ParticlesComponent />
       <div className="flex justify-center mb-2 h-[10%]">
         <Block props="Reverse" containerRef={containerRef} navigateTo="/cpp" />
       </div>
-      <div className='flex space-x-6 h-[50%] w-screen'>
+      <div className='flex flex-wrap justify-center h-[70%] w-screen items-center'>
         <Inner children='Initialization of Map'
           props={
-            <div className='w-screen h-[90%]'>
+            <div className='w-screen h-[90%] '>
               <SyntaxHighlighter language="cpp" style={materialOceanic}>
                 {codeInitialization}
               </SyntaxHighlighter>
@@ -93,7 +135,7 @@ int main() {
         />
         <Inner children='Usage'
           props={
-            <div>
+            <div className='w-screen h-[90%]'>
               <SyntaxHighlighter language="cpp" style={materialOceanic}>
                 {codeUsage}
               </SyntaxHighlighter>
@@ -102,9 +144,27 @@ int main() {
         />
         <Inner children='Use Through Iterator'
           props={
-            <div>
+            <div className='w-screen h-[90%]'>
               <SyntaxHighlighter language="cpp" style={materialOceanic}>
                 {codeIterator}
+              </SyntaxHighlighter>
+            </div>
+          }
+        />
+         <Inner children='Code Existence'
+          props={
+            <div className='w-screen h-[90%]'>
+              <SyntaxHighlighter language="cpp" style={materialOceanic}>
+                {codeExistence}
+              </SyntaxHighlighter>
+            </div>
+          }
+        />
+         <Inner children='Code Find'
+          props={
+            <div className='w-screen h-[90%]'>
+              <SyntaxHighlighter language="cpp" style={materialOceanic}>
+                {codeFind}
               </SyntaxHighlighter>
             </div>
           }
