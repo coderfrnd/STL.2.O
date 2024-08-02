@@ -118,11 +118,19 @@ int main() {
 }`;
 
   return (
-    <div className="h-screen w-screen bg-[#110d16]  flex-col ">
+    <div className="h-screen w-screen bg-[#110d16]  flex-col relative ">
       <ParticlesComponent />
-      <div className="flex justify-center mb-2 h-[10%]">
-        <Block props="Reverse" containerRef={containerRef} navigateTo="/cpp" />
+      <div className='h-[20%]  flex items-center '>
+      <div className="  mb-2 h-[100%] w-[50%] flex justify-center items-center">
+        <Block props="Back"  navigateTo="/cpp" />
+        {/* <Block props="Home Page"  navigateTo="/" /> */}
       </div>
+      <div className=" mb-2  h-[100%] w-[50%] flex justify-center items-center">
+        <Block props="Home Page"  navigateTo="/" />
+        {/* <Block props="Home Page"  navigateTo="/" /> */}
+      </div>
+      </div>
+      
       <div className='flex flex-wrap justify-center h-[70%] w-screen items-center'>
         <Inner children='Initialization of Map'
           props={
